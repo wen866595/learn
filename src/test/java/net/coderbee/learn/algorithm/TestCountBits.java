@@ -32,5 +32,23 @@ public class TestCountBits {
 		Assert.assertEquals("", countByLookUpTable(0), 0);
 	}
 
+    @Test
+    public void testCountByTypeRecursive() {
+        Assert.assertEquals("", countByTypeRecursive(1), 1);
+        Assert.assertEquals("", countByTypeRecursive(-1), 32);
+        Assert.assertEquals("", countByTypeRecursive(3), 2);
+        Assert.assertEquals("", countByTypeRecursive(6), 2);
+        Assert.assertEquals("", countByTypeRecursive(0), 0);
+    }
+
+    @Test
+    public void testCountByDeductRecursive() {
+        Assert.assertEquals("", countByDeductRecursive(1), 1);
+        Assert.assertEquals("", countByDeductRecursive(-1), 32);
+        Assert.assertEquals("", countByDeductRecursive(3), 2);
+        Assert.assertEquals("", countByDeductRecursive(6), 2);
+        Assert.assertEquals("", countByDeductRecursive(0), 0);
+    }
+
 }
 
