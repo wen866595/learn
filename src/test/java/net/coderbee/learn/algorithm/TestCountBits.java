@@ -10,9 +10,16 @@ public class TestCountBits {
 	public void testCountByType() {
 		Assert.assertEquals("", countByType(1), 1);
 		Assert.assertEquals("", countByType(-1), 32);
-		System.out.println(countByType(-1));
 		Assert.assertEquals("", countByType(3), 2);
-		
+		Assert.assertEquals("", countByType(6), 2);
+	}
+
+	@Test
+	public void testCountByDeduct() {
+		Assert.assertEquals("", countByDeduct(1), 1);
+		Assert.assertEquals("", countByDeduct(-1), 32);
+		Assert.assertEquals("", countByDeduct(3), 2);
+		Assert.assertEquals("", countByDeduct(6), 2);
 	}
 
 }

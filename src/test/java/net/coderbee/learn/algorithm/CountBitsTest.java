@@ -8,10 +8,10 @@ public class CountBitsTest {
 	
 	@Test
 	public void testCountByType() {
-		Assert.assertEquals("", countByType(1), 1);
-		Assert.assertEquals("", countByType(-1), 32);
+		Assert.assertEquals("", 1, countByType(1));
+		Assert.assertEquals("", 32, countByType(-1));
 		System.out.println(countByType(-1));
-		Assert.assertEquals("", countByType(3), 2);
+		Assert.assertEquals("", 2, countByType(3));
 		
 	}
 

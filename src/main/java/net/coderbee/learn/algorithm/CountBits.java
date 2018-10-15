@@ -10,7 +10,7 @@ public class CountBits {
 			}
 			n = n >>> 1;
 		}
-		return n;
+		return cnt;
 	}
 
 	public static int countByDeduct(int n) {
