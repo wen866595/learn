@@ -19,9 +19,7 @@ public class BinarySearchByRecursive {
         }
 
         int mid = low + ((high - low) >>> 1);
-        if (array[mid] == target) {
-            return findFirstGreatEqualsInner(array, target, low, mid - 1, mid);
-        } else if (array[mid] > target) {
+        if (array[mid] >= target) {
             return findFirstGreatEqualsInner(array, target, low, mid - 1, mid);
         } else {
             return findFirstGreatEqualsInner(array, target, mid + 1, high, foundIndex);
@@ -38,12 +36,10 @@ public class BinarySearchByRecursive {
         }
 
         int mid = low + ((high - low) >>> 1);
-        if (array[mid] == target) {
+        if (array[mid] <= target) {
             return findLastLessEqualsInner(array, target, mid + 1, high, mid);
-        } else if (array[mid] > target) {
-            return findLastLessEqualsInner(array, target, low, mid - 1, foundIndex);
         } else {
-            return findLastLessEqualsInner(array, target, mid + 1, high, mid);
+            return findLastLessEqualsInner(array, target, low, mid - 1, foundIndex);
         }
     }
 
