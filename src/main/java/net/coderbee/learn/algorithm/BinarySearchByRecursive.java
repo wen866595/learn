@@ -1,5 +1,12 @@
 package net.coderbee.learn.algorithm;
 
+/**
+ * 二分查找的变形算法（比如查找第一个等于给定值的算法）的关键在于：<br/>
+ * 找到一个满足条件的结果后，还得继续在可能存在满足条件的区域继续查找，<br/>
+ * 而继续查找不一定能找到满足条件的，所以必须把当前找到的结果存起来；<br/>
+ * 如果找不到就返回当前的结果，否则返回继续查找的结果。<br/>
+ * 初始化的查找结果是没有找到的。
+ */
 public class BinarySearchByRecursive {
 
     public static int findFirstGreatEquals(int[] array, int target) {
